@@ -1,0 +1,52 @@
+// breakpoints
+   
+$S:     480px;   
+$M:     768px;     
+$L:     1050px;   
+
+// themes
+
+$classic: 'classic';
+$glass:   'glass';
+$floral:  'floral';
+$border:  'border';
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+@mixin theme($name:classic) {
+  @if $name ==  $classic{
+    body .classic {
+      @content;
+    }
+  }
+  
+  @if $name ==  $glass{
+    body.glass {
+      @content;
+    }
+  }  
+  
+  @if $name ==  $floral{
+    body.floral {
+      @content;
+    }
+  }
+
+  @if $name ==  $border{
+    body.border {
+      @content;
+    }
+  }
+}
