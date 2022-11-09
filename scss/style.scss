@@ -95,6 +95,16 @@ h1{
 	top: 0%;
 }
 
+h2{
+	margin: 0;
+	font-weight: 800;
+	font-size: 7.25rem;
+}
+
+h3 {
+	margin: 0;
+}
+
 .txt{
 	z-index: 1;
 }
@@ -127,39 +137,90 @@ h1{
 	}
 }
 
-.cd-section > div {
+::-webkit-scrollbar{
+	width: 7px;
+	height: 7px;
 
-	background-color: transparent !important;
+	&-track{
+		background-color: transparent;
+
+		&-hover{
+			background-color: $classic-white;
+		}
+	}
+	&-thumb{
+		background-color: $classic-white;
+		border-radius: 10px;
+	}
+}
+
+.cd-section > div {
 	width: 100%;
 	height: 100%;
 
 	.content {
 		height: 96vh;
 		margin: 2vh 2vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		border-radius: 2em;
 		-webkit-border-radius: 2em;
 		-moz-border-radius: 2em;
 		-ms-border-radius: 2em;
 		-o-border-radius: 2em;
 
-		&:first-of-type {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
+		& > .plhld {
+			width: 100%;
+			height: 100%;
+			border-radius: 1em;
+			-webkit-border-radius: 1em;
+			-moz-border-radius: 1em;
+			-ms-border-radius: 1em;
+			-o-border-radius: 1em;
+		}
 
-			& > .plhld {
-				width: 50%;
-				height: 90%;
-				border-radius: 1em;
-				-webkit-border-radius: 1em;
-				-moz-border-radius: 1em;
-				-ms-border-radius: 1em;
-				-o-border-radius: 1em;
+		& > .prj_lst {
+			display: flex;
+			max-height: 400px;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			padding: 0 10% 1em 50%;
+			margin-top: 5em;
+			gap: 3%;
+			width: 100vw;
+		}
+
+		& article {
+			min-width: 400px;
+			padding: .5em;
+			background-color: #fff;
+			border-radius: 1em;
+			-webkit-border-radius: 1em;
+			-moz-border-radius: 1em;
+			-ms-border-radius: 1em;
+			-o-border-radius: 1em;
+			
+			& > .prj_img{
+				width: 100%;
+				border-radius: .5em;
+				overflow: hidden;
+
+				& img{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
 			}
-		 }
+
+			& > .txt {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				margin: auto 2%;
+				
+				a {
+					display: flex;
+				}
+			}
+		}
 	}
 
 	@include MQ(L) {
@@ -184,44 +245,106 @@ h1{
 body.classic{
 	font-family: $classic-font;
 
-	& > .cd-section{
-		& > div > .content{
-			background-color: $classic-bg;
+	.content {
+		background-color: $classic-white;
+		padding: 2rem 2%;
+		display: flex;
+	}
+
+	.plhld::after {
+		border-radius: 1em;
+		content: ' ';
+		display: block;
+		position: relative;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.2;
+		background-image: url(../img/grain.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: cover;
+		-webkit-border-radius: 1em;
+		-moz-border-radius: 1em;
+		-ms-border-radius: 1em;
+		-o-border-radius: 1em;
+	}
+	
+	// HOME
+	& > #hm {
+		.content {
+			align-items: center;
+
+			& > .txt {
+				flex-basis: 90%;
+			}
 
 			& > .plhld {
 				background: radial-gradient(118.21% 105.56% at 81.41% 22.76%, $classic-green 7.81%, $classic-orange 100%);
-
-				&::after {
-					border-radius: 1em;
-					content: ' ';
-					display: block;
-					position: relative;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					opacity: 0.2;
-					background-image: url(../img/grain.jpg);
-					background-repeat: no-repeat;
-					background-position: 50% 0;
-					background-size: cover;
-					-webkit-border-radius: 1em;
-					-moz-border-radius: 1em;
-					-ms-border-radius: 1em;
-					-o-border-radius: 1em;
-				}
 			}
 		}
-	}
 
-	& > #hm {
 		& h2 {
 			margin-top: 7em;
+			margin-left: 10%;
 			font-size: 2.5rem;
+			font-weight: 500;
 		}
 
 		& ul {
 			margin-left: 50%;
+		}
+	}
+
+	// ABOUT
+	& > #prp {
+		.content {
+			flex-direction: column;
+
+			& > .plhld {
+				background: radial-gradient(181.58% 231.65% at 59.78% -52.89%, $classic-blue 0%, $classic-pink 100%);
+			}
+		}
+
+		p {
+			margin-left: 35%;
+		}
+
+		h3 {
+			z-index: 1;
+			color: $classic-white;
+			position: absolute;
+			margin: 2em 2%;
+			width: 88%;
+		}
+	}
+
+	// PROJECTS
+	& > #prj {
+		color: $classic-white;
+		
+		.content {
+			background: radial-gradient(107.13% 107.13% at 61.8% 135.36%, #000000 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(159.54% 217.2% at 117.17% -23.99%, #CE31DC 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(101.14% 183.47% at 2.29% 6.65%, #DB6B1A 0%, rgba(0, 0, 0, 0) 100%) , #000000;;
+			flex-direction: column;
+		}
+		
+		.txt:first-of-type {
+			display: flex;
+
+			h3 {
+				margin: 5em 5% 2em 10%;
+			}
+		}
+
+		article {
+			.txt {
+				color: $black;
+				
+				p {
+					margin: 0;
+				}
+			}
 		}
 	}
 }
