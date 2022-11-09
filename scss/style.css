@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: "mobile";
+  display: none;
+}
+@media only screen and (min-width: 1050px) {
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: "desktop";
+  }
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+@media only screen and (min-width: 1050px) {
+  body[data-hijacking=on] {
+    overflow: hidden;
+  }
+}
+
+.cd-section {
+  height: 100vh;
+}
+@media only screen and (min-width: 1050px) {
+  [data-hijacking=on] .cd-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  [data-hijacking=on] .cd-section > div {
+    visibility: visible;
+  }
+  [data-hijacking=off] .cd-section > div {
+    opacity: 0;
+  }
+  [data-animation=scaleDown] .cd-section > div {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 9.375rem;
+  width: 50%;
+  position: absolute;
+  top: 0%;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 7.25rem;
+}
+
+h3 {
+  margin: 0;
+}
+
+.txt {
+  z-index: 1;
+}
+
+.menu {
+  font-size: 2.5rem;
+}
+.menu li {
+  list-style: none;
+}
+.menu li a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #000000;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+.menu li a:hover {
+  font-weight: 600;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-track-hover {
+  background-color: #DCDCDC;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #DCDCDC;
+  border-radius: 10px;
+}
+
+.cd-section > div {
+  width: 100%;
+  height: 100%;
+}
+.cd-section > div .content {
+  height: 96vh;
+  margin: 2vh 2vw;
+  border-radius: 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+}
+.cd-section > div .content > .plhld {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+.cd-section > div .content > .prj_lst {
+  display: flex;
+  max-height: 400px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 10% 1em 50%;
+  margin-top: 5em;
+  gap: 3%;
+  width: 100vw;
+}
+.cd-section > div .content article {
+  min-width: 400px;
+  padding: 0.5em;
+  background-color: #fff;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+.cd-section > div .content article > .prj_img {
+  width: 100%;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.cd-section > div .content article > .prj_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cd-section > div .content article > .txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: auto 2%;
+}
+.cd-section > div .content article > .txt a {
+  display: flex;
+}
+@media only screen and (min-width: 1050px) {
+  .cd-section > div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Force Hardware Acceleration */
+    translate: translateZ(0);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  [data-hijacking=on] .cd-section > div {
+    position: absolute;
+  }
+}
+
+body.classic {
+  font-family: "Syne", sans-serif;
+}
+body.classic .content {
+  background-color: #DCDCDC;
+  padding: 2rem 2%;
+  display: flex;
+}
+body.classic .plhld::after {
+  border-radius: 1em;
+  content: " ";
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url(../img/grain.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+body.classic > #hm .content {
+  align-items: center;
+}
+body.classic > #hm .content > .txt {
+  flex-basis: 90%;
+}
+body.classic > #hm .content > .plhld {
+  background: radial-gradient(118.21% 105.56% at 81.41% 22.76%, #52AF82 7.81%, #F7931E 100%);
+}
+body.classic > #hm h2 {
+  margin-top: 7em;
+  margin-left: 10%;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+body.classic > #hm ul {
+  margin-left: 50%;
+}
+body.classic > #prp .content {
+  flex-direction: column;
+}
+body.classic > #prp .content > .plhld {
+  background: radial-gradient(181.58% 231.65% at 59.78% -52.89%, #489297 0%, #A158A3 100%);
+}
+body.classic > #prp p {
+  margin-left: 35%;
+}
+body.classic > #prp h3 {
+  z-index: 1;
+  color: #DCDCDC;
+  position: absolute;
+  margin: 2em 2%;
+  width: 88%;
+}
+body.classic > #prj {
+  color: #DCDCDC;
+}
+body.classic > #prj .content {
+  background: radial-gradient(107.13% 107.13% at 61.8% 135.36%, #000000 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(159.54% 217.2% at 117.17% -23.99%, #CE31DC 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(101.14% 183.47% at 2.29% 6.65%, #DB6B1A 0%, rgba(0, 0, 0, 0) 100%), #000000;
+  flex-direction: column;
+}
+body.classic > #prj .txt:first-of-type {
+  display: flex;
+}
+body.classic > #prj .txt:first-of-type h3 {
+  margin: 5em 5% 2em 10%;
+}
+body.classic > #prj article .txt {
+  color: #000000;
+}
+body.classic > #prj article .txt p {
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */
