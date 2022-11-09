@@ -154,6 +154,102 @@ h3 {
 	}
 }
 
+//CAREER ALL THEME
+#crr ul {
+	list-style: none;
+
+	span {
+		white-space: nowrap;
+		width: 20%;
+	}
+
+	p {
+		margin: 0;
+		width: 30vw;
+	}
+
+	li:not(:last-child) {
+		margin-bottom: 1em;
+	}
+
+	&:first-of-type {
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 3px;
+			height: 15em;
+			background-color: $black;
+			margin-top: 2.5em;
+			left: 18vw;
+		}
+
+		& li:first-of-type > p::before {
+			content: '';
+			display: block;
+			position: absolute;
+			border-radius: .5em;
+			width: .75em;
+			height: .75em;
+			background-color: $black;
+			margin-top: .5em;
+			left: 17.5vw;
+
+		}
+
+		& h3 {
+			margin-left: 9vw;
+		}
+		
+		& li {
+			display: flex;
+		}
+
+		& span {
+			margin-right: 2em;
+			text-align: end;
+		}
+	}
+
+	&:last-of-type {
+		text-align: end;
+
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 3px;
+			height: 20em;
+			background-color: $black;
+			margin-top: 2.5em;
+			right: 15vw;
+		}
+
+		& li:first-of-type > p::before {
+			content: '';
+			display: block;
+			position: absolute;
+			border-radius: .5em;
+			width: .75em;
+			height: .75em;
+			background-color: $black;
+			margin-top: .5em;
+			right: 14.5vw;
+
+		}
+
+		& li {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+		& span {
+			margin-left: 2em;
+			text-align: start;
+		}
+	}
+}
+
 .cd-section > div {
 	width: 100%;
 	height: 100%;
@@ -191,7 +287,7 @@ h3 {
 		& article {
 			min-width: 400px;
 			padding: .5em;
-			background-color: #fff;
+			background-color: $classic-white;
 			border-radius: 1em;
 			-webkit-border-radius: 1em;
 			-moz-border-radius: 1em;
@@ -344,6 +440,19 @@ body.classic{
 				p {
 					margin: 0;
 				}
+			}
+		}
+	}
+
+	// CAREER
+	& > #crr {
+		.content{
+			flex-direction: column;
+			background: radial-gradient(96.57% 175.16% at 14.45% 50%, rgba(210, 207, 207, 0) 0%, #D268A2 100%), radial-gradient(76.25% 138.32% at -8.87% 50%, #AD2222 0%, #D2CFCF 100%);
+			
+			div {
+				display: flex;
+				justify-content: space-around;
 			}
 		}
 	}
