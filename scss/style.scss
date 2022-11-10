@@ -153,7 +153,12 @@ h3 {
 		border-radius: 10px;
 	}
 }
-
+//PROJECTS ALL THEME
+#prj {
+	.prj_lst {
+		overflow-x: hidden;
+	}
+}
 //CAREER ALL THEME
 #crr ul {
 	list-style: none;
@@ -248,6 +253,11 @@ h3 {
 			text-align: start;
 		}
 	}
+}
+
+//COMPETENCE ALL THEME
+#cpt .content {
+	background-color: $black;
 }
 
 .cd-section > div {
