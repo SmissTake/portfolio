@@ -129,7 +129,52 @@ h3 {
 }
 
 #prj .prj_lst {
+  display: flex;
+  max-height: 400px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 15% 1em 50%;
+  margin-top: 5em;
+  margin-left: -8%;
+  gap: 3%;
+  width: 120%;
   overflow-x: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+#prj .prj_lst.active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+#prj article {
+  min-width: 400px;
+  padding: 0.5em;
+  background-color: #DCDCDC;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+#prj article > .prj_img {
+  width: 100%;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+#prj article > .prj_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#prj article > .txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: auto 2%;
+}
+#prj article > .txt a {
+  display: flex;
 }
 
 #crr ul {
@@ -235,46 +280,6 @@ h3 {
   -moz-border-radius: 1em;
   -ms-border-radius: 1em;
   -o-border-radius: 1em;
-}
-.cd-section > div .content > .prj_lst {
-  display: flex;
-  max-height: 400px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  padding: 0 10% 1em 50%;
-  margin-top: 5em;
-  gap: 3%;
-  width: 100vw;
-}
-.cd-section > div .content article {
-  min-width: 400px;
-  padding: 0.5em;
-  background-color: #DCDCDC;
-  border-radius: 1em;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  -ms-border-radius: 1em;
-  -o-border-radius: 1em;
-}
-.cd-section > div .content article > .prj_img {
-  width: 100%;
-  border-radius: 0.5em;
-  overflow: hidden;
-}
-.cd-section > div .content article > .prj_img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.cd-section > div .content article > .txt {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: auto 2%;
-}
-.cd-section > div .content article > .txt a {
-  display: flex;
 }
 @media only screen and (min-width: 1050px) {
   .cd-section > div {

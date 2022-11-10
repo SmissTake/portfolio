@@ -153,10 +153,59 @@ h3 {
 		border-radius: 10px;
 	}
 }
+
 //PROJECTS ALL THEME
 #prj {
 	.prj_lst {
+		display: flex;
+		max-height: 400px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		padding: 0 15% 1em 50%;
+		margin-top: 5em;
+		margin-left: -8%;
+		gap: 3%;
+		width: 120%;
 		overflow-x: hidden;
+		cursor: grab;
+
+		&.active {
+			cursor: grabbing;
+		}
+	}
+
+	& article {
+		min-width: 400px;
+		padding: .5em;
+		background-color: $classic-white;
+		border-radius: 1em;
+		-webkit-border-radius: 1em;
+		-moz-border-radius: 1em;
+		-ms-border-radius: 1em;
+		-o-border-radius: 1em;
+		
+		& > .prj_img{
+			width: 100%;
+			border-radius: .5em;
+			overflow: hidden;
+
+			& img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		& > .txt {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin: auto 2%;
+			
+			a {
+				display: flex;
+			}
+		}
 	}
 }
 //CAREER ALL THEME
@@ -281,51 +330,6 @@ h3 {
 			-moz-border-radius: 1em;
 			-ms-border-radius: 1em;
 			-o-border-radius: 1em;
-		}
-
-		& > .prj_lst {
-			display: flex;
-			max-height: 400px;
-			overflow-x: scroll;
-			overflow-y: hidden;
-			padding: 0 10% 1em 50%;
-			margin-top: 5em;
-			gap: 3%;
-			width: 100vw;
-		}
-
-		& article {
-			min-width: 400px;
-			padding: .5em;
-			background-color: $classic-white;
-			border-radius: 1em;
-			-webkit-border-radius: 1em;
-			-moz-border-radius: 1em;
-			-ms-border-radius: 1em;
-			-o-border-radius: 1em;
-			
-			& > .prj_img{
-				width: 100%;
-				border-radius: .5em;
-				overflow: hidden;
-
-				& img{
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-
-			& > .txt {
-				display: flex;
-				justify-content: space-between;
-				align-items: flex-end;
-				margin: auto 2%;
-				
-				a {
-					display: flex;
-				}
-			}
 		}
 	}
 
