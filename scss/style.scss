@@ -161,7 +161,7 @@ h3 {
 		max-height: 400px;
 		overflow-x: scroll;
 		overflow-y: hidden;
-		padding: 0 15% 1em 50%;
+		padding: 0 15% 1em 45%;
 		margin-top: 5em;
 		margin-left: -8%;
 		gap: 3%;
@@ -211,6 +211,7 @@ h3 {
 //CAREER ALL THEME
 #crr ul {
 	list-style: none;
+	padding-left: 0;
 
 	span {
 		white-space: nowrap;
@@ -235,7 +236,7 @@ h3 {
 			height: 15em;
 			background-color: $black;
 			margin-top: 2.5em;
-			left: 18vw;
+			left: 16vw;
 		}
 
 		& li:first-of-type > p::before {
@@ -246,13 +247,14 @@ h3 {
 			width: .75em;
 			height: .75em;
 			background-color: $black;
-			margin-top: .5em;
-			left: 17.5vw;
+			margin-top: -.5em;
+			left: 15.5vw;
 
 		}
 
 		& h3 {
 			margin-left: 9vw;
+			margin-bottom: 1em;
 		}
 		
 		& li {
@@ -276,7 +278,7 @@ h3 {
 			height: 20em;
 			background-color: $black;
 			margin-top: 2.5em;
-			right: 15vw;
+			right: 16vw;
 		}
 
 		& li:first-of-type > p::before {
@@ -287,9 +289,14 @@ h3 {
 			width: .75em;
 			height: .75em;
 			background-color: $black;
-			margin-top: .5em;
-			right: 14.5vw;
+			margin-top: -.5em;
+			right: 15.5vw;
 
+		}
+
+		& h3 {
+			margin-right: 9vw;
+			margin-bottom: 1em;
 		}
 
 		& li {
@@ -307,6 +314,57 @@ h3 {
 //COMPETENCE ALL THEME
 #cpt .content {
 	background-color: $black;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 15%, #3B8D99 20%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	& > div {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+		margin: auto;
+		width: 90%;
+	}
+	.tch {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		max-width: 840px;
+		align-content: center;
+
+		//ADD TECHNO LOGO
+		@include tchn;
+	}
+	.img{
+		color: transparent;
+		background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 15%, #3B8D99 80%);
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		width: 100px;
+		height: 100px;
+	}
+
+	.lng {
+		background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 1%, #3B8D99 20%);
+		border-radius: 1em;
+		padding: 2em;
+		background-clip: initial;
+		-webkit-background-clip: border-box;
+		-webkit-text-fill-color: $black;
+
+		h3 {
+			font-weight: 800;
+		}
+		
+		p {
+			font-weight: 700;
+		}
+	}
 }
 
 .cd-section > div {

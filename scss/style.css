@@ -133,7 +133,7 @@ h3 {
   max-height: 400px;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding: 0 15% 1em 50%;
+  padding: 0 15% 1em 45%;
   margin-top: 5em;
   margin-left: -8%;
   gap: 3%;
@@ -179,6 +179,7 @@ h3 {
 
 #crr ul {
   list-style: none;
+  padding-left: 0;
 }
 #crr ul span {
   white-space: nowrap;
@@ -199,7 +200,7 @@ h3 {
   height: 15em;
   background-color: #000000;
   margin-top: 2.5em;
-  left: 18vw;
+  left: 16vw;
 }
 #crr ul:first-of-type li:first-of-type > p::before {
   content: "";
@@ -209,11 +210,12 @@ h3 {
   width: 0.75em;
   height: 0.75em;
   background-color: #000000;
-  margin-top: 0.5em;
-  left: 17.5vw;
+  margin-top: -0.5em;
+  left: 15.5vw;
 }
 #crr ul:first-of-type h3 {
   margin-left: 9vw;
+  margin-bottom: 1em;
 }
 #crr ul:first-of-type li {
   display: flex;
@@ -233,7 +235,7 @@ h3 {
   height: 20em;
   background-color: #000000;
   margin-top: 2.5em;
-  right: 15vw;
+  right: 16vw;
 }
 #crr ul:last-of-type li:first-of-type > p::before {
   content: "";
@@ -243,8 +245,12 @@ h3 {
   width: 0.75em;
   height: 0.75em;
   background-color: #000000;
-  margin-top: 0.5em;
-  right: 14.5vw;
+  margin-top: -0.5em;
+  right: 15.5vw;
+}
+#crr ul:last-of-type h3 {
+  margin-right: 9vw;
+  margin-bottom: 1em;
 }
 #crr ul:last-of-type li {
   display: flex;
@@ -257,6 +263,105 @@ h3 {
 
 #cpt .content {
   background-color: #000000;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 15%, #3B8D99 20%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#cpt .content > div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: auto;
+  width: 90%;
+}
+#cpt .content .tch {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 840px;
+  align-content: center;
+}
+#cpt .content .tch > .img.figma {
+  -webkit-mask: url("/img/tch-lg/figma.svg") no-repeat center;
+  mask: url("/img/tch-lg/figma.svg");
+}
+#cpt .content .tch > .img.sass {
+  -webkit-mask: url("/img/tch-lg/sass.svg") no-repeat center;
+  mask: url("/img/tch-lg/sass.svg");
+}
+#cpt .content .tch > .img.javascript {
+  -webkit-mask: url("/img/tch-lg/javascript.svg") no-repeat center;
+  mask: url("/img/tch-lg/javascript.svg");
+}
+#cpt .content .tch > .img.html {
+  -webkit-mask: url("/img/tch-lg/html.svg") no-repeat center;
+  mask: url("/img/tch-lg/html.svg");
+}
+#cpt .content .tch > .img.wordpress {
+  -webkit-mask: url("/img/tch-lg/wordpress.svg") no-repeat center;
+  mask: url("/img/tch-lg/wordpress.svg");
+}
+#cpt .content .tch > .img.photoshop {
+  -webkit-mask: url("/img/tch-lg/photoshop.svg") no-repeat center;
+  mask: url("/img/tch-lg/photoshop.svg");
+}
+#cpt .content .tch > .img.illustrator {
+  -webkit-mask: url("/img/tch-lg/illustrator.svg") no-repeat center;
+  mask: url("/img/tch-lg/illustrator.svg");
+}
+#cpt .content .tch > .img.linux {
+  -webkit-mask: url("/img/tch-lg/linux.svg") no-repeat center;
+  mask: url("/img/tch-lg/linux.svg");
+}
+#cpt .content .tch > .img.java {
+  -webkit-mask: url("/img/tch-lg/java.svg") no-repeat center;
+  mask: url("/img/tch-lg/java.svg");
+}
+#cpt .content .tch > .img.git {
+  -webkit-mask: url("/img/tch-lg/git.svg") no-repeat center;
+  mask: url("/img/tch-lg/git.svg");
+}
+#cpt .content .tch > .img.mysql {
+  -webkit-mask: url("/img/tch-lg/mysql.svg") no-repeat center;
+  mask: url("/img/tch-lg/mysql.svg");
+}
+#cpt .content .tch > .img.npm {
+  -webkit-mask: url("/img/tch-lg/npm.svg") no-repeat center;
+  mask: url("/img/tch-lg/npm.svg");
+}
+#cpt .content .tch > .img.nodejs {
+  -webkit-mask: url("/img/tch-lg/nodejs.svg") no-repeat center;
+  mask: url("/img/tch-lg/nodejs.svg");
+}
+#cpt .content .tch > .img.php {
+  -webkit-mask: url("/img/tch-lg/php.svg") no-repeat center;
+  mask: url("/img/tch-lg/php.svg");
+}
+#cpt .content .img {
+  color: transparent;
+  background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 15%, #3B8D99 80%);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+#cpt .content .lng {
+  background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 1%, #3B8D99 20%);
+  border-radius: 1em;
+  padding: 2em;
+  background-clip: initial;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #000000;
+}
+#cpt .content .lng h3 {
+  font-weight: 800;
+}
+#cpt .content .lng p {
+  font-weight: 700;
 }
 
 .cd-section > div {
