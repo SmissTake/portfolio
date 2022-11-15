@@ -66,14 +66,6 @@ Main Components
   }
 }
 
-h1 {
-  font-weight: 800;
-  font-size: 9.375rem;
-  width: 50%;
-  position: absolute;
-  top: 0%;
-}
-
 h2 {
   margin: 0;
   font-weight: 800;
@@ -86,31 +78,6 @@ h3 {
 
 .txt {
   z-index: 1;
-}
-
-.menu {
-  font-size: 2.5rem;
-}
-.menu li {
-  list-style: none;
-}
-.menu li a {
-  white-space: nowrap;
-  text-decoration: none;
-  color: #000000;
-  transition: 0.1s;
-  -webkit-transition: 0.1s;
-  -moz-transition: 0.1s;
-  -ms-transition: 0.1s;
-  -o-transition: 0.1s;
-}
-.menu li a:hover {
-  font-weight: 600;
-  transition: 0.1s;
-  -webkit-transition: 0.1s;
-  -moz-transition: 0.1s;
-  -ms-transition: 0.1s;
-  -o-transition: 0.1s;
 }
 
 ::-webkit-scrollbar {
@@ -126,6 +93,55 @@ h3 {
 ::-webkit-scrollbar-thumb {
   background-color: #DCDCDC;
   border-radius: 10px;
+}
+
+#hm h1 {
+  z-index: -1;
+  font-weight: 800;
+  font-size: 9.375rem;
+  width: 50%;
+  position: absolute;
+  top: 0%;
+}
+#hm h2 {
+  z-index: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  mix-blend-mode: hard-light;
+  margin-top: 7em;
+  margin-left: 10%;
+  font-size: 2.5rem;
+  font-weight: 500;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+#hm ul {
+  margin-left: 50%;
+}
+#hm .menu {
+  font-size: 2.5rem;
+}
+#hm .menu li {
+  list-style: none;
+}
+#hm .menu li a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #000000;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+#hm .menu li a:hover {
+  font-weight: 600;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
 }
 
 #prj .prj_lst {
@@ -265,10 +281,6 @@ h3 {
   background-color: #000000;
   flex-direction: column;
   flex-wrap: wrap;
-  background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 15%, #3B8D99 20%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 #cpt .content > div {
   display: flex;
@@ -350,7 +362,6 @@ h3 {
   height: 100px;
 }
 #cpt .content .lng {
-  background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 1%, #3B8D99 20%);
   border-radius: 1em;
   padding: 2em;
   background-clip: initial;
@@ -408,6 +419,153 @@ h3 {
   width: 100px;
 }
 
+@media only screen and (max-width: 1050px) {
+  body {
+    overflow-x: hidden;
+  }
+  html {
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+  }
+  .content {
+    min-width: 340px;
+  }
+  section {
+    scroll-snap-align: start;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  #hm h1 {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 1050px) and (max-width: 768px) {
+  #hm .content {
+    flex-direction: column-reverse;
+  }
+  #hm .plhld {
+    position: absolute;
+    top: 20%;
+    width: 90vw;
+    height: 20vh;
+  }
+  #hm h2 {
+    margin-left: 0;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 2em;
+  }
+  #hm .menu {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #prp p {
+    margin: 1em !important;
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 1050px) and (max-width: 768px) {
+  #prp .plhld h3 {
+    font-size: 1em;
+    margin-top: 1em !important;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #prj .prj_lst {
+    overflow-x: scroll;
+    padding-left: 5%;
+  }
+}
+@media only screen and (max-width: 1050px) and (max-width: 768px) {
+  #prj .txt:first-of-type {
+    flex-direction: column;
+  }
+  #prj article {
+    min-width: 300px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #crr .content > div {
+    flex-direction: column;
+  }
+  #crr .content h3 {
+    cursor: pointer;
+    flex-basis: 100%;
+  }
+  #crr .content h3:not(.active) {
+    margin-bottom: 0;
+  }
+  #crr .content li p {
+    width: 100%;
+    font-size: smaller;
+  }
+  #crr .content ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #crr .content ul:nth-of-type(even) {
+    justify-content: flex-end;
+  }
+  #crr .content ul::before {
+    display: none;
+  }
+  #crr .content ul:has(h3:not(.active)) li {
+    display: none;
+    overflow: hidden;
+  }
+  #crr .content ul :has(h3.active) li {
+    display: block;
+  }
+  #crr .content ul li:first-of-type p::before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1050px) and (max-width: 768px) {
+  #crr .content ul span {
+    white-space: normal;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #cpt .content {
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (max-width: 1050px) and (max-width: 768px) {
+  #cpt .content h2 {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #cpt .content > div {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #cpt .content .tch {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+  #cpt .content .tch > .img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #ctc .plhld {
+    margin-right: 0;
+  }
+  #ctc .txt h2 {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-right: 0;
+  }
+  #ctc .content {
+    flex-direction: column;
+  }
+}
 .cd-section > div {
   width: 100%;
   height: 100%;
@@ -479,17 +637,11 @@ body.classic > #hm .content {
 body.classic > #hm .content > .txt {
   flex-basis: 90%;
 }
+body.classic > #hm .content h2 {
+  background-color: #DCDCDC;
+}
 body.classic > #hm .content > .plhld {
   background: radial-gradient(118.21% 105.56% at 81.41% 22.76%, #52AF82 7.81%, #F7931E 100%);
-}
-body.classic > #hm h2 {
-  margin-top: 7em;
-  margin-left: 10%;
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-body.classic > #hm ul {
-  margin-left: 50%;
 }
 body.classic > #prp .content {
   flex-direction: column;
@@ -533,6 +685,20 @@ body.classic > #crr .content {
 body.classic > #crr .content div {
   display: flex;
   justify-content: space-around;
+}
+body.classic > #cpt .content {
+  background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 15%, #3B8D99 20%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body.classic > #cpt .lng {
+  background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 1%, #3B8D99 20%);
+}
+@media only screen and (max-width: 1050px) {
+  body.classic > #cpt .lng {
+    background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 15%, #3B8D99 30%);
+  }
 }
 body.classic > #ctc .plhld {
   background: radial-gradient(201.37% 90.59% at 138.57% 109.57%, rgba(121, 100, 249, 0) 0%, rgba(110, 162, 222, 0.31) 23.92%, rgba(252, 172, 249, 0.31) 63.04%, rgba(255, 208, 253, 0) 90.45%), radial-gradient(154.32% 154.32% at -25.49% -30.97%, rgba(121, 100, 249, 0.46) 0%, rgba(110, 162, 222, 0.46) 23.92%, rgba(252, 172, 249, 0.46) 63.04%, rgba(255, 208, 253, 0.46) 90.45%);
