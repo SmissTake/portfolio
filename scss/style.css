@@ -297,60 +297,60 @@ h3 {
   align-content: center;
 }
 #cpt .content .tch > .img.figma {
-  -webkit-mask: url("/img/tch-lg/figma.svg") no-repeat center;
-  mask: url("/img/tch-lg/figma.svg");
+  -webkit-mask: url("./img/tch-lg/figma.svg") no-repeat center;
+  mask: url("./img/tch-lg/figma.svg");
 }
 #cpt .content .tch > .img.sass {
-  -webkit-mask: url("/img/tch-lg/sass.svg") no-repeat center;
-  mask: url("/img/tch-lg/sass.svg");
+  -webkit-mask: url("./img/tch-lg/sass.svg") no-repeat center;
+  mask: url("./img/tch-lg/sass.svg");
 }
 #cpt .content .tch > .img.javascript {
-  -webkit-mask: url("/img/tch-lg/javascript.svg") no-repeat center;
-  mask: url("/img/tch-lg/javascript.svg");
+  -webkit-mask: url("./img/tch-lg/javascript.svg") no-repeat center;
+  mask: url("./img/tch-lg/javascript.svg");
 }
 #cpt .content .tch > .img.html {
-  -webkit-mask: url("/img/tch-lg/html.svg") no-repeat center;
-  mask: url("/img/tch-lg/html.svg");
+  -webkit-mask: url("./img/tch-lg/html.svg") no-repeat center;
+  mask: url("./img/tch-lg/html.svg");
 }
 #cpt .content .tch > .img.wordpress {
-  -webkit-mask: url("/img/tch-lg/wordpress.svg") no-repeat center;
-  mask: url("/img/tch-lg/wordpress.svg");
+  -webkit-mask: url("./img/tch-lg/wordpress.svg") no-repeat center;
+  mask: url("./img/tch-lg/wordpress.svg");
 }
 #cpt .content .tch > .img.photoshop {
-  -webkit-mask: url("/img/tch-lg/photoshop.svg") no-repeat center;
-  mask: url("/img/tch-lg/photoshop.svg");
+  -webkit-mask: url("./img/tch-lg/photoshop.svg") no-repeat center;
+  mask: url("./img/tch-lg/photoshop.svg");
 }
 #cpt .content .tch > .img.illustrator {
-  -webkit-mask: url("/img/tch-lg/illustrator.svg") no-repeat center;
-  mask: url("/img/tch-lg/illustrator.svg");
+  -webkit-mask: url("./img/tch-lg/illustrator.svg") no-repeat center;
+  mask: url("./img/tch-lg/illustrator.svg");
 }
 #cpt .content .tch > .img.linux {
-  -webkit-mask: url("/img/tch-lg/linux.svg") no-repeat center;
-  mask: url("/img/tch-lg/linux.svg");
+  -webkit-mask: url("./img/tch-lg/linux.svg") no-repeat center;
+  mask: url("./img/tch-lg/linux.svg");
 }
 #cpt .content .tch > .img.java {
-  -webkit-mask: url("/img/tch-lg/java.svg") no-repeat center;
-  mask: url("/img/tch-lg/java.svg");
+  -webkit-mask: url("./img/tch-lg/java.svg") no-repeat center;
+  mask: url("./img/tch-lg/java.svg");
 }
 #cpt .content .tch > .img.git {
-  -webkit-mask: url("/img/tch-lg/git.svg") no-repeat center;
-  mask: url("/img/tch-lg/git.svg");
+  -webkit-mask: url("./img/tch-lg/git.svg") no-repeat center;
+  mask: url("./img/tch-lg/git.svg");
 }
 #cpt .content .tch > .img.mysql {
-  -webkit-mask: url("/img/tch-lg/mysql.svg") no-repeat center;
-  mask: url("/img/tch-lg/mysql.svg");
+  -webkit-mask: url("./img/tch-lg/mysql.svg") no-repeat center;
+  mask: url("./img/tch-lg/mysql.svg");
 }
 #cpt .content .tch > .img.npm {
-  -webkit-mask: url("/img/tch-lg/npm.svg") no-repeat center;
-  mask: url("/img/tch-lg/npm.svg");
+  -webkit-mask: url("./img/tch-lg/npm.svg") no-repeat center;
+  mask: url("./img/tch-lg/npm.svg");
 }
 #cpt .content .tch > .img.nodejs {
-  -webkit-mask: url("/img/tch-lg/nodejs.svg") no-repeat center;
-  mask: url("/img/tch-lg/nodejs.svg");
+  -webkit-mask: url("./img/tch-lg/nodejs.svg") no-repeat center;
+  mask: url("./img/tch-lg/nodejs.svg");
 }
 #cpt .content .tch > .img.php {
-  -webkit-mask: url("/img/tch-lg/php.svg") no-repeat center;
-  mask: url("/img/tch-lg/php.svg");
+  -webkit-mask: url("./img/tch-lg/php.svg") no-repeat center;
+  mask: url("./img/tch-lg/php.svg");
 }
 #cpt .content .img {
   color: transparent;
