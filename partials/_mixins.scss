@@ -32,8 +32,8 @@
 @mixin tchn {
   @each $name in $techno-name {
     & > .img.#{$name} {
-      -webkit-mask: url("/img/tch-lg/#{$name}.svg") no-repeat center;
-  		mask: url("/img/tch-lg/#{$name}.svg");
+      -webkit-mask: url("../img/tch-lg/#{$name}.svg") no-repeat center;
+  		mask: url("../img/tch-lg/#{$name}.svg");
     }
   }
 }
