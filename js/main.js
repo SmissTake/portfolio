@@ -362,3 +362,20 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX); //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
 });
+
+//COLLABSIBLE LIST ON MOBILE
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+
+	// Loop over all the panels an close each one
+	document.querySelectorAll(".collapsible").forEach(function(panel){
+		panel.classList.remove("active");
+	  });
+
+    this.classList.toggle("active");
+  });
+}
