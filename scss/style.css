@@ -69,7 +69,7 @@ Main Components
 h2 {
   margin: 0;
   font-weight: 800;
-  font-size: 7.25rem;
+  font-size: clamp(30px, 7vw, 7.25rem);
 }
 
 h3 {
@@ -120,7 +120,7 @@ h3 {
   margin-left: 50%;
 }
 #hm .menu {
-  font-size: 2.5rem;
+  font-size: clamp(24px, 3vw, 40px);
 }
 #hm .menu li {
   list-style: none;
@@ -204,9 +204,13 @@ h3 {
 #crr ul p {
   margin: 0;
   width: 30vw;
+  font-size: clamp(16px, 2vw, 25px);
 }
 #crr ul li:not(:last-child) {
   margin-bottom: 1em;
+}
+#crr ul h3 {
+  font-size: clamp(24px, 2vw, 32px);
 }
 #crr ul:first-of-type::before {
   content: "";
@@ -364,15 +368,23 @@ h3 {
 #cpt .content .lng {
   border-radius: 1em;
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-clip: initial;
   -webkit-background-clip: border-box;
   -webkit-text-fill-color: #000000;
 }
+#cpt .content .lng ul {
+  margin: 0;
+}
 #cpt .content .lng h3 {
   font-weight: 800;
+  font-size: clamp(24px, 3vw, 29px);
 }
 #cpt .content .lng p {
   font-weight: 700;
+  font-size: clamp(20px, 2vw, 25px);
 }
 
 #ctc .plhld {
@@ -433,9 +445,6 @@ h3 {
   section {
     scroll-snap-align: start;
   }
-  h2 {
-    font-size: 2em;
-  }
   #hm h1 {
     font-size: 2.5em;
   }
@@ -467,8 +476,7 @@ h3 {
 }
 @media only screen and (max-width: 1050px) and (max-width: 768px) {
   #prp .plhld h3 {
-    font-size: 1em;
-    margin-top: 1em !important;
+    margin-top: 0.5em !important;
   }
 }
 @media only screen and (max-width: 1050px) {
@@ -481,15 +489,22 @@ h3 {
   #prj .txt:first-of-type {
     flex-direction: column;
   }
+  #prj .prj_lst {
+    margin-top: 0;
+  }
   #prj article {
     min-width: 300px;
   }
 }
 @media only screen and (max-width: 1050px) {
+  #crr .content {
+    padding: 1em;
+  }
   #crr .content > div {
     flex-direction: column;
   }
   #crr .content h3 {
+    margin-bottom: 0 !important;
     cursor: pointer;
     flex-basis: 100%;
   }
@@ -498,7 +513,6 @@ h3 {
   }
   #crr .content li p {
     width: 100%;
-    font-size: smaller;
   }
   #crr .content ul {
     display: flex;
@@ -525,6 +539,12 @@ h3 {
   #crr .content ul span {
     white-space: normal;
   }
+  #crr .content h3 {
+    margin: 0 !important;
+  }
+  #crr .content ul:has(.active) li {
+    display: block !important;
+  }
 }
 @media only screen and (max-width: 1050px) {
   #cpt .content {
@@ -533,7 +553,13 @@ h3 {
 }
 @media only screen and (max-width: 1050px) and (max-width: 768px) {
   #cpt .content h2 {
-    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  #cpt .content .lng {
+    padding: 0.5em;
+  }
+  #cpt .content p {
+    margin: 0;
   }
 }
 @media only screen and (max-width: 1050px) {
@@ -548,8 +574,8 @@ h3 {
     margin-bottom: 2em;
   }
   #cpt .content .tch > .img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
 }
 @media only screen and (max-width: 1050px) {
@@ -658,6 +684,7 @@ body.classic > #prp h3 {
   position: absolute;
   margin: 2em 2%;
   width: 88%;
+  font-size: clamp(20px, 2vw, 30px);
 }
 body.classic > #prj {
   color: #DCDCDC;
