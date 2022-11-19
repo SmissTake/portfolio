@@ -449,18 +449,9 @@ h3 {
 	body {
 		overflow-x: hidden;
 	}
-	html{
-		scroll-snap-type: y mandatory;
-	}
 	.content{
 		min-width: 340px;
 	}
-	section{
-		scroll-snap-align: start;
-	}
-	// h2 {
-	// 	font-size: 2em;
-	// }
 
 	//HOME
 	#hm {
