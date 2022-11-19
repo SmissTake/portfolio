@@ -45,6 +45,7 @@ Main Components
 
 .cd-section {
   height: 100vh;
+  min-height: 720px;
 }
 @media only screen and (min-width: 1050px) {
   [data-hijacking=on] .cd-section {
@@ -64,6 +65,10 @@ Main Components
   [data-animation=scaleDown] .cd-section > div {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
   }
+}
+
+.content {
+  min-height: 690px;
 }
 
 h2 {
@@ -506,6 +511,32 @@ h3 {
   }
   #crr .content li p {
     width: 100%;
+  }
+  #crr .content ul:first-of-type > h3:before {
+    border-left: 6px solid #000000;
+    left: 1em;
+  }
+  #crr .content ul:last-of-type > h3::before {
+    border-right: 6px solid #000000;
+    right: 1em;
+  }
+  #crr .content h3::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-top: 0.3em;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    transition: 0.1s;
+  }
+  #crr .content ul:first-of-type > h3.active::before {
+    rotate: 90deg;
+    transition: 0.1s;
+  }
+  #crr .content ul:last-of-type > h3.active::before {
+    rotate: -90deg;
+    transition: 0.1s;
   }
   #crr .content ul {
     display: flex;
