@@ -100,6 +100,12 @@ h3 {
   border-radius: 10px;
 }
 
+#hm .content {
+  align-items: center;
+}
+#hm .content > .txt {
+  flex-basis: 90%;
+}
 #hm h1 {
   z-index: -1;
   font-weight: 800;
@@ -149,6 +155,29 @@ h3 {
   -o-transition: 0.1s;
 }
 
+#prp p {
+  margin-left: 35%;
+}
+#prp h3 {
+  z-index: 1;
+  position: absolute;
+  margin: 2em 2%;
+  width: 88%;
+  font-size: clamp(20px, 2vw, 30px);
+}
+#prp .content {
+  flex-direction: column;
+}
+
+#prj .content {
+  flex-direction: column;
+}
+#prj .txt:first-of-type {
+  display: flex;
+}
+#prj .txt:first-of-type h3 {
+  margin: 5em 5% 2em 10%;
+}
 #prj .prj_lst {
   display: flex;
   max-height: 400px;
@@ -194,10 +223,20 @@ h3 {
   align-items: flex-end;
   margin: auto 2%;
 }
+#prj article > .txt p {
+  margin: 0;
+}
 #prj article > .txt a {
   display: flex;
 }
 
+#crr .content {
+  flex-direction: column;
+}
+#crr .content div {
+  display: flex;
+  justify-content: space-around;
+}
 #crr ul {
   list-style: none;
   padding-left: 0;
@@ -287,7 +326,6 @@ h3 {
 }
 
 #cpt .content {
-  background-color: #000000;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -362,8 +400,8 @@ h3 {
   mask: url("../img/tch-lg/php.svg");
 }
 #cpt .content .img {
+  background-color: #000000;
   color: transparent;
-  background: #AA4B6B;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -654,13 +692,16 @@ h3 {
   }
 }
 
+.content {
+  padding: 2rem 2%;
+  display: flex;
+}
+
 body.classic {
   font-family: "Syne", sans-serif;
 }
 body.classic .content {
   background-color: #DCDCDC;
-  padding: 2rem 2%;
-  display: flex;
 }
 body.classic .plhld::after {
   border-radius: 1em;
@@ -681,67 +722,38 @@ body.classic .plhld::after {
   -ms-border-radius: 1em;
   -o-border-radius: 1em;
 }
-body.classic > #hm .content {
-  align-items: center;
-}
-body.classic > #hm .content > .txt {
-  flex-basis: 90%;
-}
 body.classic > #hm .content h2 {
   background-color: #DCDCDC;
 }
 body.classic > #hm .content > .plhld {
   background: radial-gradient(118.21% 105.56% at 81.41% 22.76%, #52AF82 7.81%, #F7931E 100%);
 }
-body.classic > #prp .content {
-  flex-direction: column;
-}
 body.classic > #prp .content > .plhld {
   background: radial-gradient(181.58% 231.65% at 59.78% -52.89%, #489297 0%, #A158A3 100%);
 }
-body.classic > #prp p {
-  margin-left: 35%;
-}
 body.classic > #prp h3 {
-  z-index: 1;
   color: #DCDCDC;
-  position: absolute;
-  margin: 2em 2%;
-  width: 88%;
-  font-size: clamp(20px, 2vw, 30px);
 }
 body.classic > #prj {
   color: #DCDCDC;
 }
 body.classic > #prj .content {
   background: radial-gradient(107.13% 107.13% at 61.8% 135.36%, #000000 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(159.54% 217.2% at 117.17% -23.99%, #CE31DC 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(101.14% 183.47% at 2.29% 6.65%, #DB6B1A 0%, rgba(0, 0, 0, 0) 100%), #000000;
-  flex-direction: column;
-}
-body.classic > #prj .txt:first-of-type {
-  display: flex;
-}
-body.classic > #prj .txt:first-of-type h3 {
-  margin: 5em 5% 2em 10%;
 }
 body.classic > #prj article .txt {
   color: #000000;
 }
-body.classic > #prj article .txt p {
-  margin: 0;
-}
 body.classic > #crr .content {
-  flex-direction: column;
   background: radial-gradient(96.57% 175.16% at 14.45% 50%, rgba(210, 207, 207, 0) 0%, #D268A2 100%), radial-gradient(76.25% 138.32% at -8.87% 50%, #AD2222 0%, #D2CFCF 100%);
-}
-body.classic > #crr .content div {
-  display: flex;
-  justify-content: space-around;
 }
 body.classic > #cpt .content {
   background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 15%, #3B8D99 20%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+body.classic > #cpt .img {
+  background: #AA4B6B;
 }
 body.classic > #cpt .lng {
   background: radial-gradient(346.77% 7572.55% at 13.77% -111.14%, #AA4B6B 0%, #6B6B83 1%, #3B8D99 20%);
