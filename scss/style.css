@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap");
 /* -------------------------------- 
 
 Primary style
@@ -108,7 +108,6 @@ h3 {
 }
 #hm h1 {
   z-index: -1;
-  font-weight: 800;
   font-size: 9.375rem;
   width: 50%;
   position: absolute;
@@ -722,6 +721,9 @@ body.classic .plhld::after {
   -ms-border-radius: 1em;
   -o-border-radius: 1em;
 }
+body.classic > #hm h1 {
+  font-weight: 800;
+}
 body.classic > #hm .content h2 {
   background-color: #DCDCDC;
 }
@@ -765,4 +767,78 @@ body.classic > #cpt .lng {
 }
 body.classic > #ctc .plhld {
   background: radial-gradient(201.37% 90.59% at 138.57% 109.57%, rgba(121, 100, 249, 0) 0%, rgba(110, 162, 222, 0.31) 23.92%, rgba(252, 172, 249, 0.31) 63.04%, rgba(255, 208, 253, 0) 90.45%), radial-gradient(154.32% 154.32% at -25.49% -30.97%, rgba(121, 100, 249, 0.46) 0%, rgba(110, 162, 222, 0.46) 23.92%, rgba(252, 172, 249, 0.46) 63.04%, rgba(255, 208, 253, 0.46) 90.45%);
+}
+
+@font-face {
+  font-family: "Valky";
+  src: url("../img/flower/Valky.otf") format("opentype");
+}
+body.flower .content {
+  background-color: #DAD7CD;
+}
+body.flower .content::after {
+  width: 96vw;
+  height: 96vh;
+  margin: 2vh 2vw;
+  border-radius: 2em;
+  -webkit-border-radius: 2em;
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../img/flower/grain-flower.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  mix-blend-mode: luminosity;
+}
+body.flower h1, body.flower h2, body.flower h3 {
+  font-family: "Valky";
+  font-weight: 500;
+}
+body.flower p, body.flower a {
+  font-family: "Montserrat", sans-serif;
+}
+body.flower > #hm h2 {
+  margin-top: 10em;
+  margin-left: 5%;
+}
+body.flower > #hm .plhld {
+  z-index: 1;
+  background-image: url("../img/flower/plhld-flower.png");
+  background-size: contain;
+  border-radius: 400px 400px 0 0;
+  width: 50vw;
+  margin-right: 10%;
+  border: 2px solid #A3B18A;
+  box-shadow: 0px 0px 0px 10px #3A5A40;
+}
+body.flower > #prp .plhld {
+  z-index: 1;
+  background-image: url("../img/flower/plhld-flower.png");
+  background-size: cover;
+  border-radius: 400px;
+  margin-right: 10%;
+  border: 2px solid #A3B18A;
+  box-shadow: 0px 0px 0px 10px #3A5A40;
+  margin-top: 2em;
+}
+body.flower > #prp h3 {
+  margin: 5em 11vw 0 11vw;
+  width: 70vw;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #DAD7CD;
+}
+body.flower > #prp h3::after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 100px;
+  -webkit-mask: url("../img/flower/star.svg") no-repeat center;
+  mask: url("../img/flower/star.svg") no-repeat center;
+  background-color: #DAD7CD;
+  margin: 2em auto auto auto;
 }/*# sourceMappingURL=style.css.map */
