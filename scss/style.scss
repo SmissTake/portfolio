@@ -1020,8 +1020,30 @@ body.flower {
 		.lng {
 			padding: 2em 4em 2em 1em;
 		}
+	}
 
-
+	// CONTACT
+	& > #ctc .content {
+		@include MQ(MM){
+			align-items: center;
+		}
+		.plhld {
+			z-index: 1;
+			background-image: url("../img/flower/plhld-flower.png");
+			background-size: cover;
+			border-radius: 400px 400px 0 0;
+			border: 2px solid $flower-green-light;
+			box-shadow: 0px 0px 0px 10px $flower-green-dark;
+			width: 85vw;
+		}
+		@include MQ(L){
+			.plhld {
+				margin-left: 10%;
+			}
+			h2 {
+				right: 10%;
+			}
+		}
 	}
 }
 // }

@@ -889,4 +889,26 @@ body.flower > #cpt .content .lng ul p {
 }
 body.flower > #cpt .content .lng {
   padding: 2em 4em 2em 1em;
+}
+@media only screen and (max-width: 768px) {
+  body.flower > #ctc .content {
+    align-items: center;
+  }
+}
+body.flower > #ctc .content .plhld {
+  z-index: 1;
+  background-image: url("../img/flower/plhld-flower.png");
+  background-size: cover;
+  border-radius: 400px 400px 0 0;
+  border: 2px solid #A3B18A;
+  box-shadow: 0px 0px 0px 10px #3A5A40;
+  width: 85vw;
+}
+@media only screen and (min-width: 1050px) {
+  body.flower > #ctc .content .plhld {
+    margin-left: 10%;
+  }
+  body.flower > #ctc .content h2 {
+    right: 10%;
+  }
 }/*# sourceMappingURL=style.css.map */
