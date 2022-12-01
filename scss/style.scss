@@ -990,5 +990,38 @@ body.flower {
 			font-family: $flower-font;
 		}
 	}
+
+	// COMPETENCE
+	& > #cpt .content {
+		color: $flower-green-oil;
+		background-color: transparent;
+
+		&::after {
+			display: none;
+		}
+
+		h2, div {
+			z-index: 1;
+		}
+
+		.img, .lng {
+			background: $flower-green-dark;
+		}
+
+		.lng h3 {
+			font-weight: 600;
+			font-size: 1.5em;
+		}
+
+		.lng ul p {
+			font-weight: 500;
+		}
+
+		.lng {
+			padding: 2em 4em 2em 1em;
+		}
+
+
+	}
 }
 // }

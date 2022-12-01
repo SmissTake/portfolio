@@ -866,4 +866,27 @@ body.flower > #crr .content h2, body.flower > #crr .content div {
 }
 body.flower > #crr .content .year {
   font-family: "Valky", serif;
+}
+body.flower > #cpt .content {
+  color: #405644;
+  background-color: transparent;
+}
+body.flower > #cpt .content::after {
+  display: none;
+}
+body.flower > #cpt .content h2, body.flower > #cpt .content div {
+  z-index: 1;
+}
+body.flower > #cpt .content .img, body.flower > #cpt .content .lng {
+  background: #3A5A40;
+}
+body.flower > #cpt .content .lng h3 {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+body.flower > #cpt .content .lng ul p {
+  font-weight: 500;
+}
+body.flower > #cpt .content .lng {
+  padding: 2em 4em 2em 1em;
 }/*# sourceMappingURL=style.css.map */
