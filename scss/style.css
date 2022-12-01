@@ -776,7 +776,7 @@ body.flower .content {
   background-color: #DAD7CD;
 }
 body.flower .content::after {
-  width: 96vw;
+  width: 95.5vw;
   height: 96vh;
   margin: 2vh 2vw;
   border-radius: 2em;
@@ -847,7 +847,6 @@ body.flower > #prj .content {
 }
 body.flower > #prj .content::after {
   mix-blend-mode: multiply;
-  width: 95.5vw;
 }
 body.flower > #prj .content > .txt h3 {
   font-family: "Montserrat", sans-serif;
@@ -858,4 +857,13 @@ body.flower > #prj .content .prj_lst {
 }
 body.flower > #prj .content .prj_lst p {
   font-size: 0.9em;
+}
+body.flower > #crr .content {
+  color: #000000;
+}
+body.flower > #crr .content h2, body.flower > #crr .content div {
+  z-index: 1;
+}
+body.flower > #crr .content .year {
+  font-family: "Valky", serif;
 }/*# sourceMappingURL=style.css.map */

@@ -876,7 +876,7 @@ body.flower {
 		background-color: $flower-white;
 
 		&::after {
-			width: 96vw;
+			width: 95.5vw;
 			height: 96vh;
 			margin: 2vh 2vw;
 			border-radius: 2em;
@@ -962,7 +962,6 @@ body.flower {
 
 		&::after {
 			mix-blend-mode: multiply;
-			width: 95.5vw;
 		}
 
 		& > .txt h3 {
@@ -976,6 +975,19 @@ body.flower {
 			p {
 				font-size: 0.9em;
 			}
+		}
+	}
+
+	// CAREER
+	& > #crr .content {
+		color: $black;
+
+		h2, div {
+			z-index: 1;
+		}
+
+		.year {
+			font-family: $flower-font;
 		}
 	}
 }
