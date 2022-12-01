@@ -25,7 +25,6 @@ body {
 
 	font: {
 		size: 1.6rem;
-		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	@include font-smoothing;
 
@@ -869,7 +868,7 @@ body.classic{
 
 // @include theme('flower'){
 @font-face {
-	font-family: 'Valky';
+	font-family: $flower-font;
 	src: url('../img/flower/Valky.otf') format('opentype');
 }
 body.flower {
@@ -900,7 +899,7 @@ body.flower {
 	}
 
 	p, a {
-		font-family: 'Montserrat', sans-serif;
+		font-family: $flower-font-txt;
 	}
 
 	// HOME
@@ -917,8 +916,8 @@ body.flower {
 			border-radius: 400px 400px 0 0;
 			width: 50vw;
 			margin-right: 10%;
-			border: 2px solid #A3B18A;
-			box-shadow: 0px 0px 0px 10px #3A5A40;
+			border: 2px solid $flower-green-light;
+			box-shadow: 0px 0px 0px 10px $flower-green-dark;
 		}
 	}
 
@@ -930,8 +929,8 @@ body.flower {
 			background-size: cover;
 			border-radius: 400px;
 			margin-right: 10%;
-			border: 2px solid #A3B18A;
-			box-shadow: 0px 0px 0px 10px #3A5A40;
+			border: 2px solid $flower-green-light;
+			box-shadow: 0px 0px 0px 10px $flower-green-dark;
 			margin-top: 2em;
 		}
 
@@ -939,7 +938,7 @@ body.flower {
 			margin: 5em 11vw 0 11vw;
 			width: 70vw;
 			text-align: center;
-			font-family: 'Montserrat', sans-serif;
+			font-family: $flower-font-txt;
 			font-weight: 700;
 			color: $flower-white;
 
@@ -952,6 +951,30 @@ body.flower {
 				mask: url("../img/flower/star.svg") no-repeat center;
 				background-color: $flower-white;
 				margin: 2em auto auto auto;
+			}
+		}
+	}
+
+	// PROJECT
+	& > #prj .content{
+		background-color: $flower-green-oil;
+		color: $flower-white;
+
+		&::after {
+			mix-blend-mode: multiply;
+			width: 95.5vw;
+		}
+
+		& > .txt h3 {
+			font-family: $flower-font-txt;
+		}
+
+		.prj_lst {
+			z-index: 1;
+			color: $black;
+
+			p {
+				font-size: 0.9em;
 			}
 		}
 	}

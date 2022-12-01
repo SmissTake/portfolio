@@ -16,7 +16,6 @@ body {
   background-color: black;
   margin: 0;
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -770,7 +769,7 @@ body.classic > #ctc .plhld {
 }
 
 @font-face {
-  font-family: "Valky";
+  font-family: "Valky", serif;
   src: url("../img/flower/Valky.otf") format("opentype");
 }
 body.flower .content {
@@ -841,4 +840,22 @@ body.flower > #prp h3::after {
   mask: url("../img/flower/star.svg") no-repeat center;
   background-color: #DAD7CD;
   margin: 2em auto auto auto;
+}
+body.flower > #prj .content {
+  background-color: #405644;
+  color: #DAD7CD;
+}
+body.flower > #prj .content::after {
+  mix-blend-mode: multiply;
+  width: 95.5vw;
+}
+body.flower > #prj .content > .txt h3 {
+  font-family: "Montserrat", sans-serif;
+}
+body.flower > #prj .content .prj_lst {
+  z-index: 1;
+  color: #000000;
+}
+body.flower > #prj .content .prj_lst p {
+  font-size: 0.9em;
 }/*# sourceMappingURL=style.css.map */
