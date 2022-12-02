@@ -904,9 +904,62 @@ body.flower {
 
 	// HOME
 	& > #hm {
+		h1 {
+			top: 15%;
+			margin-left: 10vw;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 73px;
+				height: 93px;
+				position: absolute;
+				top:-30%;
+				left: 10vw;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: $black;
+				mask: url('../img/flower/star.svg') no-repeat;
+			}
+		}
+
 		h2 {
 			margin-top: 10em;
-			margin-left: 5%;
+			margin-left: 10vw;
+			padding-left: 3vw;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 73px;
+				height: 93px;
+				position: absolute;
+				margin-top: 1em;
+				left: 10vw;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: $black;
+				mask: url('../img/flower/star.svg') no-repeat;
+			}
+		}
+
+		.txt {
+			display: flex;
+			width: 90vw;
+			z-index: 10;
+		}
+
+		.menu {
+			text-align: center;
+			width: 50vw;
+			bottom: 10%;
+			margin: 0;
+			margin-left: 41.5vw;
+			position: absolute;
+			padding: 0;
+			a{
+				color: $flower-green-light
+			}
 		}
 
 		.plhld {
@@ -918,6 +971,20 @@ body.flower {
 			margin-right: 10%;
 			border: 2px solid $flower-green-light;
 			box-shadow: 0px 0px 0px 10px $flower-green-dark;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 73px;
+				height: 93px;
+				position: absolute;
+				top:30%;
+				left: 69vw;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: $flower-green-light;
+				mask: url('../img/flower/star.svg') no-repeat;
+			}
 		}
 	}
 

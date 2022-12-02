@@ -799,9 +799,59 @@ body.flower h1, body.flower h2, body.flower h3 {
 body.flower p, body.flower a {
   font-family: "Montserrat", sans-serif;
 }
+body.flower > #hm h1 {
+  top: 15%;
+  margin-left: 10vw;
+}
+body.flower > #hm h1::before {
+  content: "";
+  display: block;
+  width: 73px;
+  height: 93px;
+  position: absolute;
+  top: -30%;
+  left: 10vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  -webkit-mask: url("../img/flower/star.svg") no-repeat;
+          mask: url("../img/flower/star.svg") no-repeat;
+}
 body.flower > #hm h2 {
   margin-top: 10em;
-  margin-left: 5%;
+  margin-left: 10vw;
+  padding-left: 3vw;
+}
+body.flower > #hm h2::after {
+  content: "";
+  display: block;
+  width: 73px;
+  height: 93px;
+  position: absolute;
+  margin-top: 1em;
+  left: 10vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  -webkit-mask: url("../img/flower/star.svg") no-repeat;
+          mask: url("../img/flower/star.svg") no-repeat;
+}
+body.flower > #hm .txt {
+  display: flex;
+  width: 90vw;
+  z-index: 10;
+}
+body.flower > #hm .menu {
+  text-align: center;
+  width: 50vw;
+  bottom: 10%;
+  margin: 0;
+  margin-left: 41.5vw;
+  position: absolute;
+  padding: 0;
+}
+body.flower > #hm .menu a {
+  color: #A3B18A;
 }
 body.flower > #hm .plhld {
   z-index: 1;
@@ -812,6 +862,20 @@ body.flower > #hm .plhld {
   margin-right: 10%;
   border: 2px solid #A3B18A;
   box-shadow: 0px 0px 0px 10px #3A5A40;
+}
+body.flower > #hm .plhld::after {
+  content: "";
+  display: block;
+  width: 73px;
+  height: 93px;
+  position: absolute;
+  top: 30%;
+  left: 69vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #A3B18A;
+  -webkit-mask: url("../img/flower/star.svg") no-repeat;
+          mask: url("../img/flower/star.svg") no-repeat;
 }
 body.flower > #prp .plhld {
   z-index: 1;
