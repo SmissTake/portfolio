@@ -877,6 +877,32 @@ body.flower > #hm .plhld::after {
   -webkit-mask: url("../img/flower/star.svg") no-repeat;
           mask: url("../img/flower/star.svg") no-repeat;
 }
+@media only screen and (max-width: 768px) {
+  body.flower #hm .plhld::after, body.flower #hm h1::before, body.flower #hm h2::after {
+    display: none;
+  }
+  body.flower #hm h1 {
+    font-size: 4em;
+    margin: 0.5em auto;
+    top: 0;
+    width: 90vw;
+    text-align: center;
+  }
+  body.flower #hm h2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  body.flower #hm .menu {
+    width: 90vw;
+    margin: 0 auto;
+    bottom: 35%;
+  }
+  body.flower #hm .plhld {
+    height: 50vh;
+    margin-right: 0;
+  }
+}
 body.flower > #prp .plhld {
   z-index: 1;
   background-image: url("../img/flower/plhld-flower.png");
@@ -904,6 +930,14 @@ body.flower > #prp h3::after {
   mask: url("../img/flower/star.svg") no-repeat center;
   background-color: #DAD7CD;
   margin: 2em auto auto auto;
+}
+@media only screen and (max-width: 768px) {
+  body.flower #prp p {
+    font-size: 0.8em;
+  }
+  body.flower #prp .plhld h3::after {
+    display: none;
+  }
 }
 body.flower > #prj .content {
   background-color: #405644;

@@ -988,6 +988,40 @@ body.flower {
 		}
 	}
 
+	// HOME RESPONSIVE
+	@include MQ(MM) {
+		#hm {
+			.plhld::after, h1::before, h2::after {
+				display: none;
+			}
+
+			h1 {
+				font-size: 4em;
+				margin: .5em auto;
+				top: 0;
+				width: 90vw;
+				text-align: center;
+			}
+
+			h2 {
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0;
+			}
+
+			.menu {
+				width: 90vw;
+				margin: 0 auto;
+				bottom: 35%;
+			}
+
+			.plhld {
+				height: 50vh;
+				margin-right: 0;
+			}
+		}
+	}
+
 	// ABOUT
 	& > #prp {
 		.plhld {
@@ -1018,6 +1052,19 @@ body.flower {
 				mask: url("../img/flower/star.svg") no-repeat center;
 				background-color: $flower-white;
 				margin: 2em auto auto auto;
+			}
+		}
+	}
+
+	// ABOUT RESPONSIVE
+	@include MQ(MM) {
+		#prp {
+			p {
+				font-size: .8em;
+			}
+
+			.plhld h3::after {
+				display: none;
 			}
 		}
 	}
