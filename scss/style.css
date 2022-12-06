@@ -892,6 +892,7 @@ body.flower > #hm .plhld::after {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    margin-top: 15em;
   }
   body.flower #hm .menu {
     width: 90vw;
@@ -934,6 +935,9 @@ body.flower > #prp h3::after {
 @media only screen and (max-width: 768px) {
   body.flower #prp p {
     font-size: 0.8em;
+  }
+  body.flower #prp .plhld h3 {
+    margin-top: 20vw !important;
   }
   body.flower #prp .plhld h3::after {
     display: none;
@@ -991,6 +995,9 @@ body.flower > #cpt .content .lng {
 @media only screen and (max-width: 768px) {
   body.flower > #ctc .content {
     align-items: center;
+  }
+  body.flower > #ctc .content h2 > br {
+    display: none;
   }
 }
 body.flower > #ctc .content .plhld {
